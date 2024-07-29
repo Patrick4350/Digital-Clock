@@ -52,6 +52,7 @@ const checkAlarms = () => {
 
     alarms.forEach(alarm => {
         if (formattedNow === alarm.time) {
+            console.log(`Alarm triggered for time: ${alarm.time}`);
             ringAlarm();
             if (alarm.snooze) {
                 setTimeout(() => {
@@ -67,12 +68,14 @@ const checkAlarms = () => {
 };
 
 const ringAlarm = () => {
+    console.log('Alarm ring triggered');
     alarmSound.loop = true;
-    alarmSound.play();
+    alarmSound.play().catch(e => console.error('Error playing alarm sound:', e));
     triggerAlarmAnimation();
 };
 
 const stopAlarm = () => {
+    console.log('Stopping alarm');
     alarmSound.loop = false;
     alarmSound.pause();
     alarmSound.currentTime = 0;

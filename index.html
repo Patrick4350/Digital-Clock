@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>World Digital Clock</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div id="loadingOverlay">
+        <div class="clock-loader">
+            <div class="clock-inner"></div>
+        </div>
+    </div>
+
+
+    <div class="hero">
+        <div class="container">
+            <form id="timeZoneForm">
+                <input type="text" id="cityInput" autofocus placeholder="e.g., 'America/New_York'">
+                <button type="submit">Update Time</button>
+                <span id="error-message" class="error-message"></span>
+            </form>
+
+            <div class="digital-clock">
+                <div class="time">
+                    <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+                </div>
+                <div class="info" id="info"></div>
+            </div>
+
+            <div class="stopwatch">
+                <div class="stopwatch-display" id="stopwatchDisplay">00:00:00</div>
+                <div class="stopwatch-controls">
+                    <button id="startStopwatch">Start</button>
+                    <button id="stopStopwatch">Stop</button>
+                    <button id="resetStopwatch">Reset</button>
+                    <button id="lapStopwatch">Lap</button> <!-- Added Lap Button -->
+                </div>
+                <ul id="lapList" class="lap-list"></ul>
+            </div>
+
+            <div class="alarm">
+                <div class="alarm-controls">
+                    <input type="time" id="alarmTime">
+                    <button id="setAlarm">Set Alarm</button>
+                    <button id="stopAlarm">Stop Alarm</button>
+                </div>
+                <ul id="alarmList"></ul>
+            </div>
+        </div>
+    </div>
+    <audio id="alarmSound" src="/static/reflectionAlarm.mp3"></audio>
+    <div class="footer">
+        <p>Created with ❤️ by Patrick Bofah</p>
+    </div>
+    <script src="script.js"> </script>
+</body>
+</html>

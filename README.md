@@ -86,4 +86,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any questions or suggestions, feel free to reach out to me at [pbofah1@gmail.com].
+For any questions or suggestions, feel free to reach out to me at pbofah1@gmail.com.
